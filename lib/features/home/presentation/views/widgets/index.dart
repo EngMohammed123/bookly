@@ -8,4 +8,5 @@ export 'custom_book_details_app_bar.dart';
 export 'custom_book_item.dart';
 export 'featured_list_view.dart';
 export 'home_view_body.dart';
+export 'similar_books_list_view.dart';
 
