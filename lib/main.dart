@@ -6,22 +6,20 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(const Bookly());
 }
-class Bookly extends StatelessWidget{
-  const Bookly({Key?key}) : super(key:key);
+
+class Bookly extends StatelessWidget {
+  const Bookly({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kPrimaryColor,
-        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
-      ),              //get
-     
+          scaffoldBackgroundColor: kPrimaryColor,
+          textTheme: GoogleFonts.montserratTextTheme(
+              ThemeData.dark().textTheme)), //get
+
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
-

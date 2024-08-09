@@ -1,8 +1,7 @@
-
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-class BooksAction extends StatelessWidget{
+class BooksAction extends StatelessWidget {
   const BooksAction({super.key});
 
   @override
@@ -19,10 +18,10 @@ class BooksAction extends StatelessWidget{
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(16),
                 topLeft: Radius.circular(16),
+              ),
+            ),
           ),
-          ),
-          ),
-           Expanded(
+          Expanded(
             child: CustomButton(
               text: 'Free Preview',
               backgroundColor: Color(0xffEF8262),
@@ -30,8 +29,9 @@ class BooksAction extends StatelessWidget{
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(12),
                 topRight: Radius.circular(12),
-          ), fontSize: 16,
-          ),
+              ),
+              fontSize: 16,
+            ),
           ),
         ],
       ),

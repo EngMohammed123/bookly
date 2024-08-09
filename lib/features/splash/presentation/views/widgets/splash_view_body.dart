@@ -4,8 +4,6 @@ import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:go_router/go_router.dart';
 
-
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
 
@@ -39,9 +37,10 @@ class _SplashViewbodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo,
-        width: 200,
-        height: 150,
+        Image.asset(
+          AssetsData.logo,
+          width: 200,
+          height: 150,
         ),
         const SizedBox(
           height: 7,
@@ -57,7 +56,9 @@ class _SplashViewbodyState extends State<SplashViewBody>
       duration: const Duration(seconds: 1),
     );
 
-    slidingAnimation = Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero).animate(animationController);
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero)
+            .animate(animationController);
 
     animationController.forward();
   }
@@ -66,7 +67,7 @@ class _SplashViewbodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-      GoRouter.of(context).push(AppRouter.kHomeView);
+        GoRouter.of(context).push(AppRouter.kHomeView);
       },
     );
   }

@@ -11,4 +11,3 @@ export 'featured_list_view.dart';
 export 'home_view_body.dart';
 export 'similar_books_list_view.dart';
 export 'similar_books_section.dart';
-

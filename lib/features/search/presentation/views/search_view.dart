@@ -9,7 +9,7 @@ class SearchView extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: SearchViewBody(),
-        ),
+      ),
     );
   }
 }
