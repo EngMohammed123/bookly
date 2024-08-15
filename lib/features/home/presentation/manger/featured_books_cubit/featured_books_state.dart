@@ -1,4 +1,5 @@
-part of 'featured_books_cubit.dart';
+import 'package:bookly/features/home/data/models/book_model/book_model.dart';
+import 'package:equatable/equatable.dart';
 
 abstract class FeaturedBooksState extends Equatable {
   const FeaturedBooksState();
