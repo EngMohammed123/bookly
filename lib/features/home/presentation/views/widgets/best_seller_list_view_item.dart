@@ -9,7 +9,7 @@ import 'package:go_router/go_router.dart';
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({Key? key, required this.bookModel}) : super(key: key);
 
-final BookModel bookModel;
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,8 @@ final BookModel bookModel;
         height: 125,
         child: Row(
           children: [
-            CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+            CustomBookImage(
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??  ''),
             const SizedBox(
               width: 30,
             ),
@@ -42,7 +43,11 @@ final BookModel bookModel;
                   ),
                   Text(
                     bookModel.volumeInfo.authors![0],
-                   style: Styles.textStyle20),
+                    style: Styles.textStyle18.copyWith(
+                      color: Color.fromARGB(255, 207, 202, 202),
+                      fontWeight: FontWeight.normal
+                    ),
+                  ),
                   const SizedBox(
                     height: 3,
                   ),
@@ -56,7 +61,9 @@ final BookModel bookModel;
                         ),
                       ),
                       const Spacer(),
-                      BookRating(count: bookModel.volumeInfo.pageCount!,),
+                      BookRating(
+                        count: bookModel.volumeInfo.pageCount!,
+                      ),
                     ],
                   )
                 ],
