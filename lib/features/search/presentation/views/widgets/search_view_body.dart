@@ -4,7 +4,7 @@ import 'package:bookly/features/search/presentation/views/widgets/search_result_
 import 'package:flutter/material.dart';
 
 class SearchViewBody extends StatelessWidget {
-  const SearchViewBody({Key? key}) : super(key: key);
+  const SearchViewBody({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
